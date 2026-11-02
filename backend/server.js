@@ -712,7 +712,7 @@ app.get('/api/orders/my', authenticateToken, async (req, res) => {
   }
 });
 
-// получение отзывов (возвращает userId и isEdited)
+// получение отзывов
 app.get('/api/reviews/:serviceId', async (req, res) => {
   try {
     const { serviceId } = req.params;
@@ -809,7 +809,7 @@ app.put('/api/reviews/:reviewId', authenticateToken, async (req, res) => {
   }
 });
 
-// удаление отзыва (МОЖЕТ АВТОР И МОЖЕТ АДМИНИСТРАТОР)
+// удаление отзыва 
 app.delete('/api/reviews/:reviewId', authenticateToken, async (req, res) => {
   try {
     const { reviewId } = req.params;
